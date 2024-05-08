@@ -77,18 +77,12 @@ public class ChatActivity extends AppCompatActivity {
         chatAdapter = new ChatAdapter(recyclerView);
         recyclerView.setAdapter(chatAdapter);
 
-
-
-        //set Welcome message
-
-
         //Initialise JSON variables
         chatHistory = new JSONArray();
         myjsonObject = new JSONObject();
 
         //initialise Firestore
         fStore = FirebaseFirestore.getInstance();
-
 
         //get chat history from firestore and set chat history JSONArray to chat history.
         fStore.collection("users").document(username)
@@ -179,11 +173,9 @@ public class ChatActivity extends AppCompatActivity {
 
                             Log.d("JSON", "after fireStore");
 
-
                         } catch (JSONException e) {
                             throw new RuntimeException(e);
                         }
-
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -193,8 +185,6 @@ public class ChatActivity extends AppCompatActivity {
                 });
 
                 requestQueue.add(jsonObjectRequest);
-
-
             }
         });
 
