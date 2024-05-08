@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/recyclerView"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:background="@drawable/edit_text_shape"
+            android:hint="@string/type_a_message"
+            android:textColorHint="#808080"
+            android:textColor="@color/black"
+            android:padding="15dp">
+        </EditText>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_send_24"
+            android:background="@drawable/button_shape"
+            android:padding="10dp"
+            android:layout_alignTop="@+id/editText"
+            android:layout_alignBottom="@id/editText"
+            android:layout_alignEnd="@id/editText"
+            android:layout_margin="10dp"
+            android:id="@id/submitButton"
+
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
